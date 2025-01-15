@@ -41,7 +41,7 @@ const Weather = ({city}) => {
             }
         }, weather_cache_time);
         return () => clearInterval(interval);
-    }, [message])
+    }, [timeStamp, city])
 
     return (
         <div className={'infoWeath'}>
