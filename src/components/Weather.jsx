@@ -36,7 +36,7 @@ const Weather = ({city}) => {
     useEffect(() => {
         const interval = setInterval(() => {
             // TODO
-            if (Date.now() - timeStamp > weather_cache_time) {
+            if (city&&(Date.now() - timeStamp > weather_cache_time)) {
                 getWeather();
             }
         }, weather_cache_time);
